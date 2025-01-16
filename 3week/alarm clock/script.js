@@ -51,7 +51,7 @@ let alarms = []; // 알람을 저장할 배열
 
 // 알람을 추가하는 함수
 function addAlarm() {
-    // 알람 시분초 html에서 가져오기
+    // 작성된 알람 시분초 html에서 가져오기
     const hour = document.getElementById('hour').value
     const minute = document.getElementById('minute').value
     const second = document.getElementById('second').value

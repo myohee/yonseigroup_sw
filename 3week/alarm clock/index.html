@@ -18,29 +18,31 @@
 
     <main>
         <div>
-            <div>시간</div>
+            <div id="section-name">시간</div>
             <div id="time">2025-01-14 16:47:33</div>
         </div>
         
         <div>
-            <div>알람 현황</div>
+            <div id="section-name">알람 현황</div>
             <div id="alarm-list">
                 <div class="item">
                     <div>시간</div>
                     <div>알람 이름</div>
                 </div>
                 <div class="item">
-                    <div>알람을 입력하세요</div>
+                    <div>알람을 추가하세요</div>
                 </div>
             </div>
         </div>
         <div id="alarm-add">
-            <div>알람 추가하기</div>
-            <input class="add-time" type="number" id="hour" placeholder="시간" min="0" max="23" step="1">
-            <input class="add-time" type="number" id="minute" placeholder="분" min="0" max="59" step="1">
-            <input class="add-time" type="number" id="second" placeholder="초" min="0" max="59" step="1">
-            <input class="add-time" type="text" id="name" placeholder="알람 이름">
-            <button onclick="addAlarm()">추가</button>
+            <div id="section-name">알람 추가하기</div>
+            <div id="input-box">
+                <input class="add-time" type="number" id="hour" placeholder="시간" min="0" max="23" step="1">
+                <input class="add-time" type="number" id="minute" placeholder="분" min="0" max="59" step="1">
+                <input class="add-time" type="number" id="second" placeholder="초" min="0" max="59" step="1">
+                <input class="add-time" type="text" id="name" placeholder="알람 이름">
+                <button onclick="addAlarm()">추가</button>
+            </div>  
         </div>
     </main>
     <script src="script.js"></script>
