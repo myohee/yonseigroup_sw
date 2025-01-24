@@ -1,4 +1,4 @@
-// header 날짜 업데이트
+// 날짜 업데이트
 function updateDate() {
     let now = new Date();
     const nowYear = String(now.getFullYear());
@@ -53,65 +53,31 @@ function addList() {
     // updateList()
 }
 
-function updateList() {
-    const todayListDiv = document.getElementById('today-list')
-    const tomorrowListDiv = document.getElementById('tomorrow-list')
-    const laterListDiv = document.getElementById('later-list')
-
-    // todayListDiv.innerHTML = '';
-    // tomorrowListDiv.innerHTML = '';
-    // laterListDiv.innerHTML = '';
-
-    todayLists.forEach(item => {
-        const todoList = document.createElement('div');
-        todoList.innerHTML = `
-             <div class="todo-list">${item.list}</div>`;
-        todayListDiv.appendChild(todoList);
-          });
-
-    tomorrowLists.forEach(item => {
-        const todoList = document.createElement('div');
-        todoList.innerHTML = `
-                <div class="todo-list">${item.list}</div>`;
-        tomorrowListDiv.appendChild(todoList);
-        });
-    
-    laterLists.forEach(item => {
-        const todoList = document.createElement('div');
-        todoList.innerHTML = `
-                <div class="todo-list">${item.list}</div>`;
-        laterListDiv.appendChild(todoList);
-            });
-}
-
 const todoList = document.getElementsByClassName('todo-list');
 
-// todoList.addEventListener('click', function() {
-//     todoList.classList.toggle('done');
+['today-list', 'tomorrow-list', 'later-list'].forEach(listId => {
+    document.getElementById(listId).addEventListener('click', function(event) {
+        if (event.target.classList.contains('todo-list')) {
+            event.target.classList.toggle('done');
+        }
+    });
+});
+
+// document.getElementById('today-list').addEventListener('click', function(event) {
+//     if (event.target.classList.contains('todo-list')) {
+//         event.target.classList.toggle('done');
+//     }
 // });
 
-// HTMLCollection을 배열로 변환한 후, forEach로 순회하며 이벤트를 추가할 수 있습니다.
-// Array.from(todoList).forEach(function(item) {
-//     item.addEventListener('click', function() {
-//         item.classList.toggle('done');
-//     });
+// document.getElementById('tomorrow-list').addEventListener('click', function(event) {
+//     if (event.target.classList.contains('todo-list')) {
+//         event.target.classList.toggle('done');
+//     }
 // });
 
-document.getElementById('today-list').addEventListener('click', function(event) {
-    if (event.target.classList.contains('todo-list')) {
-        event.target.classList.toggle('done');
-    }
-});
-
-document.getElementById('tomorrow-list').addEventListener('click', function(event) {
-    if (event.target.classList.contains('todo-list')) {
-        event.target.classList.toggle('done');
-    }
-});
-
-document.getElementById('later-list').addEventListener('click', function(event) {
-    if (event.target.classList.contains('todo-list')) {
-        event.target.classList.toggle('done');
-    }
-});
+// document.getElementById('later-list').addEventListener('click', function(event) {
+//     if (event.target.classList.contains('todo-list')) {
+//         event.target.classList.toggle('done');
+//     }
+// });
 
