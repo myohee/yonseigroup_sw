@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+</head>
+<body>
+    <header>
+        <h1>To Do List</h1>
+        <div class="today-date"></div>
+    </header>
+    
+    <main>
+        <div class="todo-boxs">
+            <div class="todo-box">
+                <h2>오늘 할 일</h2>
+                <div class="line"></div>
+                <div id="today-list">
+                    <div class="todo-list"></div>
+                </div>
+            </div>
+            <div class="todo-box">
+                <h2>내일 할 일</h2>
+                <div class="line"></div>
+                <div id="tomorrow-list"></div>
+            </div>
+            <div class="todo-box" id=later>
+                <h2>나중에 할 일</h2>
+                <div class="line"></div>
+                <div id="later-list"></div>
+            </div>
+            <div class="todo-box" id=later>
+                <h2>할 일 입력하기</h2>
+                <div class="line"></div>
+                <div class="add-todo">
+                    <input type="text" id="add-todo-list" placeholder="할 일 추가하기">
+                    <div>
+                        <select id="add-todo-date">
+                            <option value="today">오늘</option>
+                            <option value="tomorrow">내일</option>
+                            <option value="later">나중</option>
+                        </select>
+                        <button onclick=addList()>입력 완료</button>
+                    </div>
+                </div>
+                <div class="manual">
+                    <div>할 일을 추가하세요.</div>
+                    <div>할 일을 마무리하고 클릭하세요.</div>
+                </div>
+            </div>
+        </div>
+
+    </main> 
+
+<script src="script.js"></script>
+</body>
+</html>

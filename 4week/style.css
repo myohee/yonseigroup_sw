@@ -1,0 +1,117 @@
+body{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+header{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+h1 {
+    font-size: 40px;
+}
+
+.today-date {
+    line-height: 40px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column; 
+}
+
+.todo-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.todo-box {
+    width: 350px;
+    height: 400px;
+    background-color:bisque;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.todo-box h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.todo-box .line {
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: auto;
+    margin-bottom:10px;
+}
+
+.todo-list {
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: white;
+    padding-left: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-list.done {
+    text-decoration: line-through;
+}
+
+.add-todo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.add-todo input{
+    box-sizing: border-box;
+    margin-top: 20px;
+    height: 40px;
+    width: 200px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.add-todo select {
+    font-size: 15px;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.add-todo button{
+    font-size: 15px;
+    line-height: 20px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.manual {
+    font-size: 20px;
+    margin: 40px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
